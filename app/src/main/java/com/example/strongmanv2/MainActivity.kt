@@ -10,6 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.strongmanv2.ui.theme.StrongManV2Theme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +19,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             StrongManV2Theme {
-                //Button_list(navController = )
                 AppNavHost()
             }
         }

@@ -152,7 +152,7 @@ fun Button_model(iconId: Int,description:String,text: String,navController: NavC
         Box(
             modifier = Modifier
                 .height(55.dp)
-                .clickable {},
+                .clickable (onClick = {navController.navigate(route = route)}),
         ){
             Image(
                 painter = painterResource(id = iconId),

@@ -33,7 +33,7 @@ import androidx.navigation.NavHostController
 fun MyProfilePage(navController: NavHostController){
     MainContent()
     UpperText()
-    MyProfilePageBarr()
+    MyProfilePageBarr(navController = navController)
 }
 
 @Preview
@@ -224,9 +224,8 @@ fun UpperText(){
     )
 }
 
-@Preview
 @Composable
-fun MyProfilePageBarr(){
+fun MyProfilePageBarr(navController: NavController){
     Surface(
         modifier = Modifier.fillMaxWidth(),
         color = Color.White,
@@ -243,7 +242,7 @@ fun MyProfilePageBarr(){
                     title = { Text("")
                     },
                     navigationIcon = {
-                                     IconButton(onClick = {}){
+                                     IconButton(onClick = {navController.navigate(route = NavRoute.Button_list.route)}){
                                          Icon(imageVector = Icons.Filled.ArrowBack,contentDescription = "")
                                      }
                     },
